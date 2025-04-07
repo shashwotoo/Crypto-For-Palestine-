@@ -1,54 +1,100 @@
-<header>
+  <!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto for Palestine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2, h3 {
+      color: #0a0a23;
+    }
+    .wallet {
+      margin: 30px 0;
+    }
+    .wallet h3 {
+      margin-bottom: 10px;
+    }
+    .qr {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+    .address {
+      font-family: monospace;
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      word-break: break-all;
+    }
+    .tracker {
+      background: #e6f2ff;
+      padding: 20px;
+      margin-top: 40px;
+      border-left: 5px solid #007BFF;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Crypto for Palestine</h1>
+    <nav>
+      <a href="#donate">Donate</a>
+      <a href="#tracker">Donation Tracker</a>
+    </nav>
+  </header>  <div class="container" id="donate">
+    <h2>Make a Difference with Crypto</h2>
+    <p>Your donation helps provide urgent aid—food, shelter, and medical support—for the people of Gaza. 100% of donations go directly to those affected, with full transparency.</p><div class="wallet">
+  <h3>USDT / ETH (ERC-20):</h3>
+  <img src="qr-code.png" alt="MetaMask QR Code" class="qr">
+  <div class="address">0x14214acA77a0863D1d70575FF34a061496DB9Eb4</div>
+</div>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+<div class="wallet">
+  <h3>BTC:</h3>
+  <div class="address">bc1qrl9md39ys89e99ssry0eagw5lhd7qrmqa09qn4</div>
+</div>
 
-# GitHub Pages
-
-_Create a site or blog from your GitHub repositories with GitHub Pages._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Enable GitHub Pages
-
-_Welcome to GitHub Pages and Jekyll :tada:!_
-
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
-
-### :keyboard: Activity: Enable GitHub Pages
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+  </div>  <div class="container" id="tracker">
+    <h2>Donation Tracker</h2>
+    <div class="tracker">
+      <p><strong>Total Raised:</strong> <span id="raised">$0</span></p>
+      <p><strong>Goal:</strong> $10,000</p>
+      <progress id="progress" value="0" max="10000" style="width: 100%; height: 20px;"></progress>
+    </div>
+  </div>  <footer>
+    <p>&copy; 2025 Crypto for Palestine. All rights reserved.</p>
+  </footer>  <script>
+    // Fake tracker logic (replace with real data or integration later)
+    const totalRaised = 2650; // Example amount in USD
+    document.getElementById("raised").innerText = `$${totalRaised.toLocaleString()}`;
+    document.getElementById("progress").value = totalRaised;
+  </script></body>
+</html>
